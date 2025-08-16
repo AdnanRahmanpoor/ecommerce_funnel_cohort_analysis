@@ -5,11 +5,11 @@ import pandas as pd
 client = bigquery.Client.from_service_account_json('./config/credentials.json')
 
 # Read sql file (Replace with sql file name)
-with open('./sql/funnel/03_channel_performance.sql', 'r') as f:
+with open('./sql/clv/01_segmentation.sql', 'r') as f:
     query = f.read()
 
 # run and print
 print("Executing query...")
 df = client.query(query).to_dataframe()
 print(f"Got {len(df)} rows")
-print(df.head())
+print(df)

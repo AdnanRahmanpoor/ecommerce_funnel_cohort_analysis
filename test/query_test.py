@@ -5,7 +5,7 @@ import pandas as pd
 client = bigquery.Client.from_service_account_json('./config/credentials.json')
 
 # Read sql file (Replace with sql file name)
-with open('./sql/clv/01_segmentation.sql', 'r') as f:
+with open('./sql/products/02_affinity.sql', 'r') as f:
     query = f.read()
 
 # run and print
